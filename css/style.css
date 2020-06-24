@@ -1,0 +1,637 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+}
+
+.img-fulled {
+    transform: scale(1, 1);
+    width: 100%;
+    max-width: none;
+    transition: .5s;
+}
+
+.scrollnone {
+    overflow: hidden;
+}
+
+.ifremhide {
+    display: block !important;
+}
+
+.d-none {
+    display: none;
+}
+
+.navlogo-d-h {
+    display: none;
+}
+
+
+/* navbar */
+
+.fixed-bar {
+    background-color: #fff;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    left: 0;
+    top: 0;
+    transition: .3s;
+}
+
+.navbarclose {
+    height: 60px;
+}
+
+.fixed-bar a {
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.fixed-title {
+    z-index: 1000;
+    position: fixed;
+    height: 23px;
+    left: 15px;
+    top: 17px;
+}
+
+.fixed-img {
+    height: 60px;
+    margin-left: 10px;
+}
+
+
+/* full wrap */
+
+.full {
+    margin-top: 60px;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+}
+
+.full img {
+    display: block;
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.wrap {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 85%;
+    margin: auto;
+    text-align: left;
+    line-height: 50px;
+    padding-top: 100px;
+    opacity: 0;
+    animation: An-full-title 1.2s linear forwards;
+}
+
+.full .full-title {
+    font-size: 46px;
+    color: #fff;
+}
+
+.full .full-txt {
+    font-size: 28px;
+    color: #fff;
+}
+
+@keyframes An-full-title {
+    from {
+        padding-top: 100px;
+        opacity: 0;
+    }
+    to {
+        padding-top: 0px;
+        opacity: 1;
+    }
+}
+
+
+/* teacher wrap */
+
+.title {
+    position: relative;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    margin: 120px auto 30px auto;
+    text-align: center;
+    font-weight: 200;
+}
+
+.title::before {
+    content: "";
+    position: relative;
+}
+
+.teacherwrap {
+    display: flex;
+    line-height: 0px;
+}
+
+.teachitem {
+    position: relative;
+    vertical-align: bottom;
+}
+
+.teachitem a {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.block-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    transition: .3s;
+}
+
+.teachitem a:hover>.img-fulled {
+    transform: scale(1.1, 1.1) !important;
+}
+
+.block-canvas:hover {
+    opacity: 0;
+}
+
+.itemtext h1 {
+    font-size: 2.8em;
+}
+
+
+/* video wrap */
+
+.videowrap {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.videoitem {
+    position: relative;
+    margin: 0 25px;
+    transition: .5s;
+}
+
+.videoitem:hover {
+    box-shadow: 0 0 30px rgba(104, 104, 104, 0.557);
+}
+
+.block-canvas-video {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    transition: .3s;
+}
+
+.block-canvas-video:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.block-canvas-video img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 1024px) {
+    .title {
+        margin: 20px 0 5px 0;
+    }
+    .videowrap {
+        flex-direction: column;
+    }
+    .videoitem {
+        display: block;
+        margin: 30px auto !important;
+        width: 80%;
+    }
+    .ifrem-wrap iframe {
+        height: auto !important;
+    }
+    .ifrem-wrap i {
+        top: 39% !important;
+        right: 9% !important;
+    }
+}
+
+
+/* ifrem */
+
+.ifrem-wrap {
+    display: none;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0b0b0ba5;
+}
+
+.ifrem-wrap iframe {
+    position: absolute;
+    width: 75%;
+    height: calc(75% - 60px);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ifrem-wrap i {
+    position: absolute;
+    top: 15%;
+    right: 12%;
+    color: #fff;
+    font-size: 32px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.ifrem-wrap i:hover {
+    color: #ccc;
+}
+
+.v-intro {
+    position: absolute;
+    margin-top: 10px;
+    font-weight: 200;
+    text-align: center;
+    width: 100%;
+    color: #555;
+    font-size: 1.2em;
+    transition: .3s;
+}
+
+.block-canvas-video:hover+.v-intro {
+    color: #000;
+}
+
+
+/* search wrap */
+
+.searchwrap {
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.searchclose {
+    top: 15px;
+    transition: .3s;
+}
+
+.searchwrap input {
+    display: inline-block;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+.searchwrap input[type="text"] {
+    background-color: #fff;
+    width: 300px;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px 0 0 25px;
+}
+
+.searchwrap input[type="submit"] {
+    position: relative;
+    border-radius: 0 25px 25px 0;
+    left: -5px;
+    width: 80px;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #f0b217;
+    color: #fff;
+}
+
+.searchwrap input[type="submit"]:hover {
+    background: #ff5722;
+}
+
+@media only screen and (max-width: 768px) {
+    .navlogo-d-none {
+        display: none;
+    }
+    .searchwrap {
+        top: -10px;
+    }
+    .searchwrap input {
+        font-size: 14px;
+    }
+    .searchwrap input[type="text"] {
+        width: 250px;
+        padding: 0 15px;
+    }
+    .searchwrap input[type="submit"] {
+        width: 60px;
+    }
+    .navlogo-d-none {
+        display: none;
+    }
+    .navlogo-d-h {
+        top: 10px;
+        display: inline-block;
+    }
+}
+
+
+/* item txt */
+
+.item1:hover::before {
+    font-size: 2.2em;
+}
+
+.item1::before {
+    content: "智 慧 機 械";
+    font-size: 1.8em;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .4s;
+}
+
+.item1:hover::after {
+    font-size: 1.2em;
+}
+
+.item1::after {
+    content: "Wisdom Machinery";
+    font-size: 1em;
+    font-style: italic;
+    color: #fff;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .4s;
+}
+
+.item2:hover::before {
+    font-size: 2.2em;
+}
+
+.item2::before {
+    content: "半 導 體";
+    font-size: 1.8em;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .4s;
+}
+
+.item2:hover::after {
+    font-size: 1.2em;
+}
+
+.item2::after {
+    content: "Semiconductor";
+    font-size: 1em;
+    font-style: italic;
+    color: #fff;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .4s;
+}
+
+.item3:hover::before {
+    font-size: 2.2em;
+}
+
+.item3::before {
+    content: "公 安 防 治";
+    font-size: 1.8em;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .4s;
+}
+
+.item3:hover::after {
+    font-size: 1.2em;
+}
+
+.item3::after {
+    content: "Safety Prevention";
+    font-size: 1em;
+    font-style: italic;
+    color: #fff;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .4s;
+}
+
+.item4:hover::before {
+    font-size: 2.2em;
+}
+
+.item4::before {
+    content: "智 慧 生 醫";
+    font-size: 1.8em;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .4s;
+}
+
+.item4:hover::after {
+    font-size: 1.2em;
+}
+
+.item4::after {
+    content: "Wisdom Biomedicine";
+    font-size: 1em;
+    font-style: italic;
+    color: #fff;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .4s;
+}
+
+@media only screen and (max-width: 1250px) {
+    .teacherwrap {
+        flex-direction: column;
+    }
+    .d-none {
+        display: block;
+    }
+    .d-h {
+        display: none;
+    }
+    .item1::after,
+    .item2::after,
+    .item3::after,
+    .item4::after {
+        top: 60%;
+        font-size: 1em;
+    }
+    .item1::before,
+    .item2::before,
+    .item3::before,
+    .item4::before {
+        font-size: 2.2em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .item1::after,
+    .item2::after,
+    .item3::after,
+    .item4::after {
+        top: 70%;
+        font-size: 1em;
+    }
+    .item1::before,
+    .item2::before,
+    .item3::before,
+    .item4::before {
+        font-size: 1.8em;
+    }
+}
+
+
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    background-color: #111;
+    flex-wrap: wrap;
+}
+
+.footertitle {
+    width: 100%;
+    color: #eee;
+    margin: 20px 0;
+    line-height: 25px;
+    text-align: center;
+}
+
+.footertext {
+    display: flex;
+    color: #eee;
+    margin: auto 0;
+}
+
+.footeritem {
+    line-height: 30px;
+    margin: 0 80px;
+}
+
+.copyright {
+    margin-top: 10px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    line-height: 60px;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 1024px) {
+    h1 {
+        font-size: 1.7em;
+    }
+    .full {
+        height: auto;
+    }
+    .full-title {
+        font-size: 42px !important;
+    }
+    .full-txt {
+        font-size: 28px;
+    }
+    .fixed-img {
+        height: 55px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.4em !important;
+    }
+    .fixed-bar {
+        height: 60px;
+        line-height: 80px;
+    }
+    .fixed-img {
+        height: 35px;
+    }
+    .wrap {
+        line-height: 30px;
+        top: 35%;
+        text-align: center;
+    }
+    .full-title {
+        font-size: 24px !important;
+    }
+    .full-txt {
+        font-size: 18px !important;
+    }
+    .footeritem {
+        line-height: 22px;
+    }
+    .footertext {
+        flex-direction: column;
+        text-align: center;
+        font-size: 12px;
+    }
+    .copyright {
+        margin: 0;
+    }
+}
