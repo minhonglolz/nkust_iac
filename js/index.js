@@ -10,6 +10,7 @@
         $(o).click(function() {
             console.log(i)
             $('.ifrem-wrap').eq(i).toggleClass('ifremhide')
+
             $('body').toggleClass('scrollnone')
         })
     })

@@ -96,7 +96,7 @@
     line-height: 50px;
     padding-top: 100px;
     opacity: 0;
-    animation: An-full-title 1.2s linear forwards;
+    animation: An-full-title 1.2s .5s linear forwards;
 }
 
 .full .full-title {
@@ -121,16 +121,121 @@
 }
 
 
+/* new wrap */
+
+.newwrap {
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+}
+
+article {
+    width: 480px;
+    margin: 0 40px 60px 40px;
+    transition: .3s;
+}
+
+article img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+article a {
+    text-decoration: none;
+}
+
+article:hover {
+    opacity: .8;
+}
+
+.new-btn {
+    margin: 70px 20px 0 20px;
+    text-align: center;
+}
+
+article span {
+    color: #717171;
+    background-color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-style: solid;
+    border-color: #717171;
+    border-image: initial;
+    padding: 2px 18px;
+    border-radius: 18px;
+    text-decoration: none;
+    transition: color 0.4s ease 0s, background-color 0.2s ease 0s;
+}
+
+.newtxtwrap {
+    padding: 0 20px;
+    line-height: 38px;
+}
+
+.newtxtwrap h2 {
+    color: #000;
+    margin: 10px 0 10px 0;
+}
+
+.newtxtwrap p {
+    color: #717171;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.newdate {
+    padding: 0 20px;
+    margin-top: 20px;
+    text-align: right;
+    color: #717171;
+    font-size: .9em;
+}
+
+@media only screen and (max-width:1024px) {
+    .newwrap {
+        flex-wrap: wrap;
+    }
+    article {
+        width: 600px;
+        margin-bottom: 50px;
+    }
+    .newtxtwrap p {
+        -webkit-line-clamp: 2;
+    }
+    .new-btn {
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .newtxtwrap {
+        line-height: 24px;
+    }
+    .newtxtwrap h2 {
+        font-size: 1.4em;
+    }
+    .newtxtwrap p {
+        font-size: .8em;
+    }
+}
+
+
 /* teacher wrap */
 
 .title {
+    margin-right: 32px;
     position: relative;
     display: block;
     height: 60px;
     line-height: 60px;
-    margin: 120px auto 30px auto;
+    margin: 100px auto 30px auto;
     text-align: center;
-    font-weight: 200;
+}
+
+.fa-youtube {
+    margin-right: 8px !important;
 }
 
 .title::before {
@@ -183,6 +288,10 @@
 
 /* video wrap */
 
+.video {
+    margin-bottom: 220px;
+}
+
 .videowrap {
     display: flex;
     justify-content: space-around;
@@ -193,10 +302,19 @@
     position: relative;
     margin: 0 25px;
     transition: .5s;
+    /* overflow: hidden; */
 }
 
 .videoitem:hover {
     box-shadow: 0 0 30px rgba(104, 104, 104, 0.557);
+}
+
+.v-imgwrap {
+    overflow: hidden;
+}
+
+.videoitem:hover>.v-imgwrap>.img-fulled {
+    transform: scale(1.05, 1.05);
 }
 
 .block-canvas-video {
@@ -211,6 +329,10 @@
     transition: .3s;
 }
 
+.test {
+    overflow: hidden;
+}
+
 .block-canvas-video:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
@@ -223,6 +345,12 @@
 }
 
 @media only screen and (max-width: 1024px) {
+    .video {
+        margin-bottom: 60px;
+    }
+    .video .title {
+        margin-bottom: -25px;
+    }
     .title {
         margin: 20px 0 5px 0;
     }
@@ -235,11 +363,11 @@
         width: 80%;
     }
     .ifrem-wrap iframe {
-        height: auto !important;
+        height: 30% !important;
     }
     .ifrem-wrap i {
-        top: 39% !important;
-        right: 9% !important;
+        top: 33% !important;
+        right: 8% !important;
     }
 }
 
@@ -247,6 +375,7 @@
 /* ifrem */
 
 .ifrem-wrap {
+    z-index: 999;
     display: none;
     position: fixed;
     overflow: hidden;
@@ -282,17 +411,34 @@
 
 .v-intro {
     position: absolute;
-    margin-top: 10px;
-    font-weight: 200;
     text-align: center;
+    margin-top: 14px;
     width: 100%;
-    color: #555;
-    font-size: 1.2em;
+    color: rgba(0, 0, 0);
+    font-size: 1.6em;
     transition: .3s;
 }
 
+.v-intro-p {
+    position: absolute;
+    bottom: 0;
+    color: rgba(0, 0, 0);
+    opacity: 0;
+    transition: .3s;
+}
+
+.block-canvas-video:hover+.v-intro-P {
+    opacity: 1;
+}
+
 .block-canvas-video:hover+.v-intro {
-    color: #000;
+    color: #3498db;
+}
+
+@media only screen and (max-width:768px) {
+    .v-intro {
+        font-size: 1em;
+    }
 }
 
 
@@ -558,12 +704,13 @@ footer {
 .footertitle {
     width: 100%;
     color: #eee;
-    margin: 20px 0;
+    margin: 30px 0;
     line-height: 25px;
     text-align: center;
 }
 
 .footertext {
+    margin: 30px 0;
     display: flex;
     color: #eee;
     margin: auto 0;
@@ -575,7 +722,7 @@ footer {
 }
 
 .copyright {
-    margin-top: 10px;
+    margin-top: 30px;
     color: #fff;
     text-align: center;
     width: 100%;
