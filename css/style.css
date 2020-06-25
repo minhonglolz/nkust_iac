@@ -149,7 +149,7 @@ article:hover {
 }
 
 .new-btn {
-    margin: 70px 20px 0 20px;
+    margin: 50px 20px 0 20px;
     text-align: center;
 }
 
@@ -168,7 +168,7 @@ article span {
 
 .newtxtwrap {
     padding: 0 20px;
-    line-height: 38px;
+    line-height: 42px;
 }
 
 .newtxtwrap h2 {
@@ -415,7 +415,7 @@ article span {
     margin-top: 14px;
     width: 100%;
     color: rgba(0, 0, 0);
-    font-size: 1.6em;
+    font-size: 1.4em;
     transition: .3s;
 }
 
@@ -762,7 +762,6 @@ footer {
     .wrap {
         line-height: 30px;
         top: 35%;
-        text-align: center;
     }
     .full-title {
         font-size: 24px !important;
