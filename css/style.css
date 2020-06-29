@@ -27,11 +27,15 @@
     display: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 /* navbar */
 
 .fixed-bar {
-    box-shadow: 0 1px 80px #fad390c2;
+    box-shadow: 0 1px 40px #fad390c2;
     background-image: linear-gradient(to top, #fad39069 0%, #f8bd85b7 100%);
     z-index: 999;
     position: fixed;
@@ -80,7 +84,7 @@
 .full {
     box-sizing: border-box;
     padding: 5% 0;
-    margin-top: 60px;
+    margin-top: 40px;
     position: relative;
     width: 100%;
     height: 100vh;
@@ -95,13 +99,20 @@
     object-fit: cover;
 }
 
+@media only screen and (max-width:1024px) {
+    .full img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 .wrap {
     width: 100%;
     margin: auto;
     line-height: 50px;
     padding-top: 100px;
     opacity: 0;
-    animation: An-full-title 1.2s .5s linear forwards;
+    animation: An-full-title .8s .3s linear forwards;
 }
 
 .full .full-title {
@@ -153,7 +164,7 @@ article a {
 }
 
 article:hover {
-    opacity: .8;
+    opacity: .7;
 }
 
 .new-btn {
@@ -183,9 +194,15 @@ article span {
 .newtxtwrap h2 {
     color: #222;
     margin: 10px 0 10px 0;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 .newtxtwrap p {
+    height: 180px;
     color: #717171;
     display: -webkit-box;
     overflow: hidden;
@@ -211,6 +228,7 @@ article span {
         margin-bottom: 50px;
     }
     .newtxtwrap p {
+        height: 100px;
         -webkit-line-clamp: 2;
     }
     .new-btn {
@@ -301,7 +319,7 @@ article span {
 
 .video {
     background-color: #fddca221;
-    padding: 90px 0 170px 0;
+    padding: 80px 0 170px 0;
     margin-bottom: 60px;
 }
 
@@ -362,6 +380,7 @@ article span {
 @media only screen and (max-width: 1024px) {
     .video {
         margin-bottom: 60px;
+        padding: 30px 0 60px 0;
     }
     .video .title {
         margin-bottom: -25px;
@@ -429,11 +448,8 @@ article span {
     text-align: center;
     margin-top: 14px;
     width: 100%;
-<<<<<<< HEAD
     color: #222;
-=======
     color: rgba(0, 0, 0);
->>>>>>> 8a91c1d922dadbc8369f5f688e0a10754c8120eb
     font-size: 1.4em;
     transition: .3s;
 }
@@ -511,6 +527,60 @@ article span {
 
 .searchwrap input[type="submit"]:hover {
     background: #ff5722;
+}
+
+.search-wrap {
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: #fdcd54;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px;
+    transition: .4s;
+}
+
+.search-wrap:hover {
+    background-color: #f0b217;
+    width: 340px;
+}
+
+.search-wrap:hover>.search-txt {
+    width: 260px;
+    padding: 0 6px;
+}
+
+.search-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+}
+
+.search-btn:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.search-txt {
+    padding-left: 10px;
+    width: 0px;
+    line-height: 40px;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #fff;
+    transition: .4s;
+}
+
+.search-txt::placeholder {
+    color: white;
 }
 
 @media only screen and (max-width: 768px) {
@@ -704,6 +774,95 @@ article span {
     .item3::before,
     .item4::before {
         font-size: 1.8em;
+    }
+}
+
+
+/* map wrap */
+
+.map {
+    background-color: #fddca221;
+    padding: 120px 0;
+}
+
+.mapwrap {
+    display: flex;
+    margin: 0 auto;
+    padding: 0 200px;
+}
+
+.mapimgwrap,
+.maptxtwrap {
+    max-width: 100%;
+    width: 100%;
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.mapimgwrap img {
+    width: 100%;
+    height: auto;
+}
+
+.mapintro {
+    margin-bottom: 20px;
+}
+
+.maptxtwrap h1 {
+    margin: 0 0 10px 0;
+    color: #6d6d6d;
+    line-height: 62px;
+    position: relative;
+}
+
+.maptxtwrap h1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+}
+
+.maptxtwrap p {
+    line-height: 38px;
+    font-size: 1.2em;
+}
+
+.maptxtwrap a {
+    color: #f69e10a9;
+    line-height: 38px;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.maptxtwrap a:hover {
+    color: #fa9d08;
+    ;
+}
+
+@media only screen and (max-width:1200px) {
+    .map {
+        padding: 100px 0;
+    }
+    .mapwrap {
+        padding: 80px 0 !important;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .map {
+        padding: 60px 0;
+    }
+    .mapwrap {
+        flex-direction: column;
+        padding: 0 20px !important;
+    }
+    .mapimgwrap,
+    .maptxtwrap {
+        margin: 0 0 10px 0;
     }
 }
 
