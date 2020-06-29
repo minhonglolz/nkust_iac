@@ -157,7 +157,7 @@ article:hover {
 }
 
 .new-btn {
-    margin: 70px 20px 0 20px;
+    margin: 50px 20px 0 20px;
     text-align: center;
 }
 
@@ -177,7 +177,7 @@ article span {
 .newtxtwrap {
     color: #222;
     padding: 0 20px;
-    line-height: 38px;
+    line-height: 42px;
 }
 
 .newtxtwrap h2 {
@@ -429,7 +429,11 @@ article span {
     text-align: center;
     margin-top: 14px;
     width: 100%;
+<<<<<<< HEAD
     color: #222;
+=======
+    color: rgba(0, 0, 0);
+>>>>>>> 8a91c1d922dadbc8369f5f688e0a10754c8120eb
     font-size: 1.4em;
     transition: .3s;
 }
@@ -777,7 +781,6 @@ footer {
     .wrap {
         line-height: 30px;
         top: 35%;
-        text-align: center;
     }
     .full-title {
         font-size: 24px !important;
