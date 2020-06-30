@@ -35,8 +35,8 @@ a {
 /* navbar */
 
 .fixed-bar {
-    box-shadow: 0 1px 40px #fad390c2;
-    background-image: linear-gradient(to top, #fad39069 0%, #f8bd85b7 100%);
+    box-shadow: 0 1px 40px rgba(250, 210, 143, 0.7607);
+    background-image: linear-gradient(to top, rgba(250, 211, 143, 0.4117) 0%, rgba(248, 188, 132, 0.7176) 100%);
     z-index: 999;
     position: fixed;
     width: 100%;
@@ -107,6 +107,7 @@ a {
 }
 
 .wrap {
+    margin-top: -40px !important;
     width: 100%;
     margin: auto;
     line-height: 50px;
@@ -145,7 +146,6 @@ a {
 .newwrap {
     display: flex;
     justify-content: center;
-    /* flex-wrap: wrap; */
 }
 
 article {
@@ -186,6 +186,7 @@ article span {
 }
 
 .newtxtwrap {
+    height: 300px;
     color: #222;
     padding: 0 20px;
     line-height: 42px;
@@ -194,17 +195,12 @@ article span {
 .newtxtwrap h2 {
     color: #222;
     margin: 10px 0 10px 0;
-    display: -webkit-box;
     overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
 }
 
 .newtxtwrap p {
     height: 180px;
     color: #717171;
-    display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 4;
@@ -226,9 +222,15 @@ article span {
     article {
         width: 600px;
         margin-bottom: 50px;
+        padding: 0;
+    }
+    .newtxtwrap {
+        height: 200px;
+    }
+    article img {
+        width: 100%;
     }
     .newtxtwrap p {
-        height: 100px;
         -webkit-line-clamp: 2;
     }
     .new-btn {
@@ -239,12 +241,14 @@ article span {
 @media only screen and (max-width:768px) {
     .newtxtwrap {
         line-height: 24px;
+        height: auto;
     }
     .newtxtwrap h2 {
         font-size: 1.4em;
     }
     .newtxtwrap p {
         font-size: .8em;
+        height: auto;
     }
 }
 
@@ -252,7 +256,7 @@ article span {
 /* teacher wrap */
 
 .title {
-    color: #6d6d6d;
+    color: #212121;
     margin-right: 32px;
     position: relative;
     display: block;
@@ -318,7 +322,7 @@ article span {
 /* video wrap */
 
 .video {
-    background-color: #fddca221;
+    background-color: rgba(255, 224, 162, 0.1294);
     padding: 80px 0 170px 0;
     margin-bottom: 60px;
 }
@@ -568,6 +572,7 @@ article span {
 }
 
 .search-txt {
+    height: 40px;
     padding-left: 10px;
     width: 0px;
     line-height: 40px;
@@ -781,7 +786,7 @@ article span {
 /* map wrap */
 
 .map {
-    background-color: #fddca221;
+    background-color: rgba(255, 224, 162, 0.1294);
     padding: 120px 0;
 }
 
@@ -799,6 +804,10 @@ article span {
     margin: 0 30px;
 }
 
+.mapimgwrap iframe {
+    width: 100%;
+}
+
 .mapimgwrap img {
     width: 100%;
     height: auto;
@@ -810,7 +819,7 @@ article span {
 
 .maptxtwrap h1 {
     margin: 0 0 10px 0;
-    color: #6d6d6d;
+    color: #212121;
     line-height: 62px;
     position: relative;
 }
@@ -840,10 +849,9 @@ article span {
 
 .maptxtwrap a:hover {
     color: #fa9d08;
-    ;
 }
 
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width:1400px) {
     .map {
         padding: 100px 0;
     }
