@@ -2,7 +2,7 @@
 (function() {
     window.addEventListener('scroll', function() {
         if (jQuery(window).width() > 768) {
-            $('.fixed-bar').toggleClass('navbarclose', window.scrollY > 0)
+            $('.fixed-bar').toggleClass('navbarclose ', window.scrollY > 0)
             $('.searchwrap').toggleClass('searchclose ', window.scrollY > 0)
         }
     })
