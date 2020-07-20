@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高雄科技大學教師媒合網</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css' />
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="fixed-bar">
+        <!-- <a href="index.html" title="教師論文、產學及專利專區" class="fixed-title">
+        國立高雄科技大學 產學營運處
+    </a> -->
+        <a href="index.html" title="教師論文、產學及專利專區" class="logo">
+            <img src="../img/NKUSTlogo2.png" alt="教師論文、產學及專利專區" class="fixed-img navlogo-d-none">
+            <img src="../img/NKUSTlogo2.png" alt="教師論文、產學及專利專區" class="fixed-img navlogo-d-h">
+        </a>
+        <div class="searchwrap">
+            <!-- <h2>教師產學計畫查詢</h2> -->
+            <!-- <form action="">
+            <input type="text" placeholder="請輸入關鍵字 ex:姓名、論文、計畫">
+            <input type="submit" value="搜 尋">
+        </form> -->
+        </div>
+    </div>
+    <!-- content wrap -->
+    <section class="full searchfull">
+        <a href="../view/search.html">
+            <img src="../img/nkustlogofull.png" alt="">
+        </a>
+
+        <div class="wrap">
+            <div class="full-title">
+                國立高雄科技大學 產學營運處
+            </div>
+            <div class="full-txt">
+                教師產學計畫查詢系統
+            </div>
+        </div>
+        <div class="search-wrap">
+            <input class="search-txt" type="text" placeholder="請輸入關鍵字 ex:姓名、論文、計畫">
+            <a class="search-btn">
+                <i class="fas fa-search" onclick="ajaxtest()"></i>
+            </a>
+        </div>
+    </section>
+    <table>
+        <thead>
+            <tr>
+                <td>教師</td>
+                <td>專長</td>
+                <td>專利</td>
+                <td>論文</td>
+                <td>計畫</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <!-- footer -->
+    <footer>
+        <div class="footertitle">
+            <h1>國 立 高 雄 科 技 大 學</h1>
+            <p>產學營運處 / 產學營運中心</p>
+            <!-- <img src="../img/nkustlogo.png" alt="國立高雄科技大學"> -->
+            <!-- <img src="../img/logo.png" alt="教師論文、產學及專利專區"> -->
+        </div>
+        <div class="footertext">
+            <div class="footeritem">
+                <p>第一校區<br> 82445高雄市燕巢區大學路1號
+                    <br>西校區
+                    <br> 81164高雄市楠梓區卓越路2號
+                    <br> 傳真 : 07-6011067<br>
+                </p>
+            </div>
+            <div class="footeritem">
+                <p>建工校區<br> 80778高雄市三民區建工路415號
+                    <br>燕巢校區
+                    <br>82444 高雄市燕巢區深中路58號
+                    <br> 傳真 : 07-3907424<br>
+                </p>
+            </div>
+            <div class="footeritem">
+                <p>楠梓校區<br> 81157高雄市楠梓區海專路142號
+                    <br>旗津校區
+                    <br> 80543 高雄市旗津區中洲三路482號
+                    <br> 傳真 : 07-3630065<br>
+                </p>
+            </div>
+
+        </div>
+        <div class="copyright">
+            &copy;copyright 2020 國立高雄科技大學 產學營運處
+        </div>
+    </footer>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
