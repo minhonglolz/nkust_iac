@@ -464,7 +464,7 @@ article span {
     width: 65%;
     height: 600px;
     margin-left: 40px;
-    border: 2px solid #717171;
+    border: 2px solid rgba(204, 204, 204, 0.562);
     border-radius: 10px;
     box-sizing: border-box;
     overflow-y: scroll;
@@ -482,6 +482,15 @@ article span {
     border-collapse: collapse;
 }
 
+.intro-tablewrap tr {
+    /* background-color: rgb(255, 255, 255);
+    color: #292929; */
+}
+
+.intro-tablewrap th {
+    /* border-right: 1px solid #ccc; */
+}
+
 .intro-tablewrap tbody th {
     padding: 10px 5px;
     overflow-x: hidden;
@@ -491,20 +500,39 @@ article span {
 }
 
 .intro-tablewrap tbody tr {
+    border-top: 1px solid #ccc;
     transition: .2s;
 }
 
 .intro-tablewrap tbody tr:hover {
-    background-color: rgba(224, 224, 224, 0.295);
+    background-color: rgba(248, 248, 248, 0.247);
 }
 
 .t-name,
-.t-plan {
+.t-plan,
+.t-operating {
     padding: 10px;
 }
 
+.t-operating a {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #2b89f5;
+    color: #FFF;
+}
+
+.t-operating a:hover {
+    /* text-decoration: underline; */
+}
+
 .t-name {
+    text-align: center;
     width: 15%;
+}
+
+.t-operating {
+    text-align: center;
+    width: 25%;
 }
 
 .t-plan {
@@ -517,6 +545,16 @@ article span {
     padding: 0 80px;
     width: 50%;
     box-sizing: border-box;
+}
+
+.intro-txtwrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: .2;
+    z-index: -2;
 }
 
 .intro-txtwrap h1,
@@ -608,14 +646,15 @@ article span {
     }
 }
 
-@keyframes introimg {
+
+/* @keyframes introimg {
     0% {
         width: 0%;
     }
     100% {
         width: 50%;
     }
-}
+} */
 
 @media only screen and (max-width:1200px) {
     .introclosebtn {
@@ -645,7 +684,7 @@ article span {
         width: 20%;
     }
     .intro img {
-        width: 90%;
+        /* width: 90%; */
     }
     .intro-txtwrap,
     .intro-tablewrap {
@@ -1002,7 +1041,7 @@ article span {
 }
 
 .item2::before {
-    content: "智 慧 服 務";
+    content: "智 能 商 務";
     font-size: 1.8em;
     color: #fff;
     position: absolute;
@@ -1064,7 +1103,7 @@ article span {
 }
 
 .item4::before {
-    content: "智 慧 文 創";
+    content: "智 能 文 創";
     font-size: 1.8em;
     color: #fff;
     position: absolute;
